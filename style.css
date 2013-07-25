@@ -3,7 +3,9 @@ h1 { text-align: center; font-size: 30pt; }
 
 h2 { text-align: center; font-size: 15pt; font-style: italic }
 
-.tweet { margin: 0 auto; width: 20em; }
+body { background: #F0EAD6 }
+
+.tweet { margin: 0 auto; width: 20em; background: #E3DAC9; padding: 0.5em; margin-bottom: 1em; border-radius: 0.5em; }
 
 .tweet-text { text-align: left; }
 
