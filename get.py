@@ -35,7 +35,7 @@ def generate_html(all_text):
     print '<h2>A site dedicated to fruit-related drama occurring within the worldwide <a href="http://skweee.com">skweee</a> scene</h2>'
     for text, user in all_text:
         print '<div class="tweet"><p class=tweet-text>"'+text+'"</p>'
-        print '<p class="tweet-author">&mdash;'+user+'</p></div>'
+        print '<p class="tweet-author">&mdash;<a href="http://twitter.com/'+user+'">'+user+'</a></p></div>'
     print '</body>'
 
 generate_html(collect_all())
