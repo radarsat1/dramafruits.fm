@@ -1,11 +1,14 @@
 #!/bin/sh
 
 BRANCH="$(basename $(cat .git/HEAD | cut -d' ' -f2))"
-python get.py >out.html
-cp style.css __tmp.css
+mkdir tmp
+python get.py >tmp/index.html
+cp style.css tmp/
+cp background.jpg tmp/
+cp tweetbg.jpg tmp/
 git checkout gh-pages
-mv out.html index.html
-mv __tmp.css style.css
-git add index.html style.css
+mv tmp/* .
+rmdir tmp
+git add index.html style.css background.jpg tweetbg.jpg
 git commit -m "$(date)"
 git checkout "$BRANCH"
